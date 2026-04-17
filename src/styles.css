@@ -1393,3 +1393,213 @@ h3 {
   box-shadow: 0 0 12px rgba(229, 9, 20, 0.2);
   outline: none;
 }
+
+
+/* Firebase Authentication Styles */
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+  padding: 20px;
+}
+
+.login-container {
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.login-content {
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid rgba(229, 9, 20, 0.3);
+  border-radius: 12px;
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.login-content h1 {
+  font-size: 2.5rem;
+  margin: 0 0 12px;
+  color: #e50914;
+  text-shadow: 2px 2px 8px rgba(229, 9, 20, 0.3);
+}
+
+.login-subtitle {
+  font-size: 1.1rem;
+  color: #b3b3b3;
+  margin: 0 0 32px;
+}
+
+.login-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #e50914;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.google-signin-button:hover {
+  background: #f40612;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(229, 9, 20, 0.4);
+}
+
+.google-signin-button:active {
+  transform: translateY(0);
+}
+
+.login-note {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: #808080;
+  line-height: 1.5;
+}
+
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #141414;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(229, 9, 20, 0.2);
+  border-top-color: #e50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-screen p {
+  font-size: 1.1rem;
+  color: #b3b3b3;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: #141414;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(20, 20, 20, 0.95);
+  border-bottom: 2px solid rgba(229, 9, 20, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e50914;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sync-indicator {
+  font-size: 0.85rem;
+  color: #e50914;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.logout-button {
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(229, 9, 20, 0.8);
+  border: 1px solid #e50914;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #e50914;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .user-header {
+    padding: 12px 20px;
+  }
+  
+  .user-name {
+    display: none;
+  }
+  
+  .login-content {
+    padding: 32px 24px;
+  }
+  
+  .login-content h1 {
+    font-size: 2rem;
+  }
+}

@@ -456,35 +456,16 @@ function getViewFromHash(hash) {
   return parseHashDay(hash) ? "day" : "overview";
 }
 
-export default function App() {
+export default function App({ initialData, onDataChange }) {
   const initialHashDay = parseHashDay(window.location.hash);
-  const [day, setDay] = useState(
-    () => initialHashDay || Number(localStorage.getItem(storageKeys.day)) || 1
-  );
+  const [day, setDay] = useState(() => initialHashDay || initialData?.day || 1);
   const [view, setView] = useState(() => getViewFromHash(window.location.hash));
-  const [completed, setCompleted] = useState(() => {
-    const saved = localStorage.getItem(storageKeys.completed);
-    return saved ? JSON.parse(saved) : {};
-  });
-  const [notesByDay, setNotesByDay] = useState(() => {
-    const saved = localStorage.getItem(storageKeys.notesByDay);
-    return saved ? JSON.parse(saved) : {};
-  });
-  const [codeByDay, setCodeByDay] = useState(() => {
-    const saved = localStorage.getItem(storageKeys.codeByDay);
-    return saved ? JSON.parse(saved) : {};
-  });
-  const [watchedResources, setWatchedResources] = useState(() => {
-    const saved = localStorage.getItem(storageKeys.watchedResources);
-    return saved ? JSON.parse(saved) : {};
-  });
-  const [calendarFilter, setCalendarFilter] = useState(
-    () => localStorage.getItem(storageKeys.calendarFilter) || "all"
-  );
-  const [completedDays, setCompletedDays] = useState(() => {
-    const saved = localStorage.getItem(storageKeys.completedDays);
-    return saved ? JSON.parse(saved) : {};
-  });
+  const [completed, setCompleted] = useState(initialData?.completed || {});
+  const [notesByDay, setNotesByDay] = useState(initialData?.notesByDay || {});
+  const [codeByDay, setCodeByDay] = useState(initialData?.codeByDay || {});
+  const [watchedResources, setWatchedResources] = useState(initialData?.watchedResources || {});
+  const [calendarFilter, setCalendarFilter] = useState(initialData?.calendarFilter || "all");
+  const [completedDays, setCompletedDays] = useState(initialData?.completedDays || {});
   const dailyPlans = useMemo(() => buildDailyPlans(problemBank), []);
 
   const selectedDayPlan = useMemo(
@@ -525,33 +506,24 @@ export default function App() {
     [selectedDayPlan]
   );
 
+  // Save data to Firebase whenever it changes
   useEffect(() => {
-    localStorage.setItem(storageKeys.day, String(day));
-  }, [day]);
-
-  useEffect(() => {
-    localStorage.setItem(storageKeys.completed, JSON.stringify(completed));
-  }, [completed]);
-
-  useEffect(() => {
-    localStorage.setItem(storageKeys.notesByDay, JSON.stringify(notesByDay));
-  }, [notesByDay]);
-
-  useEffect(() => {
-    localStorage.setItem(storageKeys.codeByDay, JSON.stringify(codeByDay));
-  }, [codeByDay]);
-
-  useEffect(() => {
-    localStorage.setItem(storageKeys.watchedResources, JSON.stringify(watchedResources));
-  }, [watchedResources]);
-
-  useEffect(() => {
-    localStorage.setItem(storageKeys.calendarFilter, calendarFilter);
-  }, [calendarFilter]);
-
-  useEffect(() => {
-    localStorage.setItem(storageKeys.completedDays, JSON.stringify(completedDays));
-  }, [completedDays]);
+    if (onDataChange) {
+      const timeoutId = setTimeout(() => {
+        onDataChange({
+          day,
+          completed,
+          notesByDay,
+          codeByDay,
+          watchedResources,
+          calendarFilter,
+          completedDays
+        });
+      }, 1000); // Debounce saves by 1 second
+      
+      return () => clearTimeout(timeoutId);
+    }
+  }, [day, completed, notesByDay, codeByDay, watchedResources, calendarFilter, completedDays, onDataChange]);
 
   useEffect(() => {
     function syncRoute() {
