@@ -1477,6 +1477,9 @@ h3 {
   border: 2px solid rgba(229, 9, 20, 0.3);
   border-radius: 12px;
   padding: 48px 40px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
 
 /* Animated Tech Icons */
 .tech-icons-container {
@@ -1610,15 +1613,6 @@ h3 {
     transform: translateY(-30px) translateX(5px) rotate(1deg);
     opacity: 0.8;
   }
-}
-
-.login-content {
-  background: rgba(20, 20, 20, 0.95);
-  border: 2px solid rgba(229, 9, 20, 0.3);
-  border-radius: 12px;
-  padding: 48px 40px;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .login-content h1 {
