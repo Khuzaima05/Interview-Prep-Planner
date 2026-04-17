@@ -5,26 +5,51 @@ export default function LoginScreen() {
 
   return (
     <div className="login-screen">
-      {/* Animated tech icons background */}
-      <div className="tech-icons-container">
-        <div className="tech-icon" style={{ left: '10%', animationDelay: '0s' }}>{'{ }'}</div>
-        <div className="tech-icon" style={{ left: '20%', animationDelay: '2s' }}>{'</>'}</div>
-        <div className="tech-icon" style={{ left: '30%', animationDelay: '4s' }}>{'[ ]'}</div>
-        <div className="tech-icon" style={{ left: '40%', animationDelay: '1s' }}>{'( )'}</div>
-        <div className="tech-icon" style={{ left: '50%', animationDelay: '3s' }}>{'<>'}</div>
-        <div className="tech-icon" style={{ left: '60%', animationDelay: '5s' }}>{'01'}</div>
-        <div className="tech-icon" style={{ left: '70%', animationDelay: '2.5s' }}>{'10'}</div>
-        <div className="tech-icon" style={{ left: '80%', animationDelay: '4.5s' }}>{'λ'}</div>
-        <div className="tech-icon" style={{ left: '90%', animationDelay: '1.5s' }}>{'∞'}</div>
-        <div className="tech-icon" style={{ left: '15%', animationDelay: '3.5s' }}>{'#'}</div>
-        <div className="tech-icon" style={{ left: '25%', animationDelay: '0.5s' }}>{'$'}</div>
-        <div className="tech-icon" style={{ left: '35%', animationDelay: '2.8s' }}>{'@'}</div>
-        <div className="tech-icon" style={{ left: '45%', animationDelay: '4.2s' }}>{'*'}</div>
-        <div className="tech-icon" style={{ left: '55%', animationDelay: '1.8s' }}>{'+'}</div>
-        <div className="tech-icon" style={{ left: '65%', animationDelay: '3.2s' }}>{'='}</div>
-        <div className="tech-icon" style={{ left: '75%', animationDelay: '0.8s' }}>{'~'}</div>
-        <div className="tech-icon" style={{ left: '85%', animationDelay: '2.2s' }}>{'|'}</div>
-        <div className="tech-icon" style={{ left: '95%', animationDelay: '4.8s' }}>{'&'}</div>
+      {/* Word Cloud of Topics */}
+      <div className="word-cloud-container">
+        {/* Data Structures & Algorithms */}
+        <span className="word-cloud-item size-xl" style={{ top: '10%', left: '15%', animationDelay: '0s' }}>Arrays</span>
+        <span className="word-cloud-item size-lg" style={{ top: '15%', left: '70%', animationDelay: '0.5s' }}>Hashing</span>
+        <span className="word-cloud-item size-md" style={{ top: '25%', left: '40%', animationDelay: '1s' }}>Two Pointers</span>
+        <span className="word-cloud-item size-xl" style={{ top: '20%', left: '85%', animationDelay: '1.5s' }}>Sliding Window</span>
+        <span className="word-cloud-item size-lg" style={{ top: '35%', left: '10%', animationDelay: '2s' }}>Stack</span>
+        <span className="word-cloud-item size-md" style={{ top: '40%', left: '60%', animationDelay: '2.5s' }}>Binary Search</span>
+        <span className="word-cloud-item size-xl" style={{ top: '45%', left: '30%', animationDelay: '3s' }}>Linked List</span>
+        <span className="word-cloud-item size-lg" style={{ top: '50%', left: '80%', animationDelay: '3.5s' }}>Trees</span>
+        <span className="word-cloud-item size-md" style={{ top: '55%', left: '5%', animationDelay: '4s' }}>Heap</span>
+        <span className="word-cloud-item size-xl" style={{ top: '60%', left: '50%', animationDelay: '4.5s' }}>Graphs</span>
+        <span className="word-cloud-item size-lg" style={{ top: '65%', left: '25%', animationDelay: '5s' }}>Dynamic Programming</span>
+        <span className="word-cloud-item size-md" style={{ top: '70%', left: '75%', animationDelay: '5.5s' }}>Tries</span>
+        <span className="word-cloud-item size-sm" style={{ top: '75%', left: '45%', animationDelay: '6s' }}>Backtracking</span>
+        
+        {/* System Design */}
+        <span className="word-cloud-item size-lg" style={{ top: '12%', left: '50%', animationDelay: '0.8s' }}>Scalability</span>
+        <span className="word-cloud-item size-md" style={{ top: '28%', left: '20%', animationDelay: '1.3s' }}>Load Balancing</span>
+        <span className="word-cloud-item size-sm" style={{ top: '32%', left: '75%', animationDelay: '1.8s' }}>Caching</span>
+        <span className="word-cloud-item size-lg" style={{ top: '42%', left: '90%', animationDelay: '2.3s' }}>Microservices</span>
+        <span className="word-cloud-item size-md" style={{ top: '48%', left: '15%', animationDelay: '2.8s' }}>CAP Theorem</span>
+        <span className="word-cloud-item size-sm" style={{ top: '58%', left: '65%', animationDelay: '3.3s' }}>Sharding</span>
+        <span className="word-cloud-item size-lg" style={{ top: '68%', left: '35%', animationDelay: '3.8s' }}>Message Queues</span>
+        <span className="word-cloud-item size-md" style={{ top: '78%', left: '60%', animationDelay: '4.3s' }}>CDN</span>
+        
+        {/* CS Fundamentals */}
+        <span className="word-cloud-item size-md" style={{ top: '8%', left: '35%', animationDelay: '1.2s' }}>Networking</span>
+        <span className="word-cloud-item size-sm" style={{ top: '18%', left: '55%', animationDelay: '1.7s' }}>TCP/IP</span>
+        <span className="word-cloud-item size-lg" style={{ top: '30%', left: '85%', animationDelay: '2.2s' }}>Operating Systems</span>
+        <span className="word-cloud-item size-md" style={{ top: '38%', left: '45%', animationDelay: '2.7s' }}>Concurrency</span>
+        <span className="word-cloud-item size-sm" style={{ top: '52%', left: '22%', animationDelay: '3.2s' }}>Threads</span>
+        <span className="word-cloud-item size-lg" style={{ top: '62%', left: '70%', animationDelay: '3.7s' }}>Databases</span>
+        <span className="word-cloud-item size-md" style={{ top: '72%', left: '12%', animationDelay: '4.2s' }}>REST APIs</span>
+        <span className="word-cloud-item size-sm" style={{ top: '82%', left: '80%', animationDelay: '4.7s' }}>Docker</span>
+        
+        {/* Additional Topics */}
+        <span className="word-cloud-item size-md" style={{ top: '22%', left: '8%', animationDelay: '0.3s' }}>Recursion</span>
+        <span className="word-cloud-item size-sm" style={{ top: '44%', left: '72%', animationDelay: '0.9s' }}>BFS/DFS</span>
+        <span className="word-cloud-item size-lg" style={{ top: '56%', left: '38%', animationDelay: '1.4s' }}>Sorting</span>
+        <span className="word-cloud-item size-md" style={{ top: '66%', left: '88%', animationDelay: '1.9s' }}>Greedy</span>
+        <span className="word-cloud-item size-sm" style={{ top: '80%', left: '28%', animationDelay: '2.4s' }}>Bit Manipulation</span>
+        <span className="word-cloud-item size-lg" style={{ top: '5%', left: '65%', animationDelay: '2.9s' }}>Algorithms</span>
+        <span className="word-cloud-item size-md" style={{ top: '85%', left: '50%', animationDelay: '3.4s' }}>Design Patterns</span>
       </div>
       
       <div className="login-container">
