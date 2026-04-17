@@ -5,6 +5,28 @@ export default function LoginScreen() {
 
   return (
     <div className="login-screen">
+      {/* Animated tech icons background */}
+      <div className="tech-icons-container">
+        <div className="tech-icon" style={{ left: '10%', animationDelay: '0s' }}>{'{ }'}</div>
+        <div className="tech-icon" style={{ left: '20%', animationDelay: '2s' }}>{'</>'}</div>
+        <div className="tech-icon" style={{ left: '30%', animationDelay: '4s' }}>{'[ ]'}</div>
+        <div className="tech-icon" style={{ left: '40%', animationDelay: '1s' }}>{'( )'}</div>
+        <div className="tech-icon" style={{ left: '50%', animationDelay: '3s' }}>{'<>'}</div>
+        <div className="tech-icon" style={{ left: '60%', animationDelay: '5s' }}>{'01'}</div>
+        <div className="tech-icon" style={{ left: '70%', animationDelay: '2.5s' }}>{'10'}</div>
+        <div className="tech-icon" style={{ left: '80%', animationDelay: '4.5s' }}>{'λ'}</div>
+        <div className="tech-icon" style={{ left: '90%', animationDelay: '1.5s' }}>{'∞'}</div>
+        <div className="tech-icon" style={{ left: '15%', animationDelay: '3.5s' }}>{'#'}</div>
+        <div className="tech-icon" style={{ left: '25%', animationDelay: '0.5s' }}>{'$'}</div>
+        <div className="tech-icon" style={{ left: '35%', animationDelay: '2.8s' }}>{'@'}</div>
+        <div className="tech-icon" style={{ left: '45%', animationDelay: '4.2s' }}>{'*'}</div>
+        <div className="tech-icon" style={{ left: '55%', animationDelay: '1.8s' }}>{'+'}</div>
+        <div className="tech-icon" style={{ left: '65%', animationDelay: '3.2s' }}>{'='}</div>
+        <div className="tech-icon" style={{ left: '75%', animationDelay: '0.8s' }}>{'~'}</div>
+        <div className="tech-icon" style={{ left: '85%', animationDelay: '2.2s' }}>{'|'}</div>
+        <div className="tech-icon" style={{ left: '95%', animationDelay: '4.8s' }}>{'&'}</div>
+      </div>
+      
       <div className="login-container">
         <div className="login-content">
           <h1>90-Day Interview Prep</h1>
