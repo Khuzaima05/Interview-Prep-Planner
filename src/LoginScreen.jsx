@@ -54,23 +54,8 @@ export default function LoginScreen() {
       
       <div className="login-container">
         <div className="login-content">
-          <h1>90-Day Interview Prep</h1>
-          <p className="login-subtitle">Sign in to sync your progress across devices</p>
-          
-          <div className="login-features">
-            <div className="feature-item">
-              <span className="feature-icon">☁️</span>
-              <span>Cloud sync across devices</span>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">🔒</span>
-              <span>Secure data storage</span>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">📱</span>
-              <span>Access anywhere</span>
-            </div>
-          </div>
+          <h1>CodeMaster 90</h1>
+          <p className="login-subtitle">Your Complete Interview Preparation Journey</p>
 
           <button className="google-signin-button" onClick={signInWithGoogle}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

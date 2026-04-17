@@ -1401,67 +1401,10 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #141414, #1a1a1a, #e50914, #141414);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  background: #000000;
   padding: 20px;
   position: relative;
   overflow: hidden;
-}
-
-.login-screen::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(229, 9, 20, 0.1) 0%, transparent 70%);
-  animation: rotate 20s linear infinite;
-}
-
-.login-screen::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(229, 9, 20, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(229, 9, 20, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(229, 9, 20, 0.08) 0%, transparent 50%);
-  animation: float 10s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.05);
-  }
 }
 
 .login-container {
@@ -1473,12 +1416,12 @@ h3 {
 }
 
 .login-content {
-  background: rgba(20, 20, 20, 0.95);
-  border: 2px solid rgba(229, 9, 20, 0.3);
+  background: rgba(10, 10, 10, 0.98);
+  border: 2px solid rgba(0, 255, 255, 0.3);
   border-radius: 12px;
   padding: 48px 40px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2), 0 0 60px rgba(0, 255, 255, 0.1);
 }
 
 /* Animated Tech Icons */
@@ -1567,32 +1510,35 @@ h3 {
 }
 
 .word-cloud-item:hover {
-  color: rgba(229, 9, 20, 0.8);
-  text-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
-  transform: scale(1.2);
+  transform: scale(1.3);
+  filter: brightness(1.5);
 }
 
 .word-cloud-item.size-xl {
   font-size: 2.5rem;
-  color: rgba(229, 9, 20, 0.5);
+  color: #00ff00;
+  text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
   font-weight: 800;
 }
 
 .word-cloud-item.size-lg {
   font-size: 2rem;
-  color: rgba(229, 9, 20, 0.45);
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
   font-weight: 700;
 }
 
 .word-cloud-item.size-md {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: #ff00ff;
+  text-shadow: 0 0 12px #ff00ff, 0 0 24px #ff00ff;
   font-weight: 600;
 }
 
 .word-cloud-item.size-sm {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.25);
+  color: #ffff00;
+  text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00;
   font-weight: 500;
 }
 
@@ -1618,14 +1564,16 @@ h3 {
 .login-content h1 {
   font-size: 2.5rem;
   margin: 0 0 12px;
-  color: #e50914;
-  text-shadow: 2px 2px 8px rgba(229, 9, 20, 0.3);
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  font-weight: 800;
 }
 
 .login-subtitle {
   font-size: 1.1rem;
-  color: #b3b3b3;
+  color: #ffffff;
   margin: 0 0 32px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .login-features {
@@ -1659,19 +1607,19 @@ h3 {
   padding: 16px 24px;
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  background: #e50914;
-  border: none;
+  color: #000;
+  background: linear-gradient(135deg, #00ffff, #00ff00);
+  border: 2px solid #00ffff;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
 .google-signin-button:hover {
-  background: #f40612;
+  background: linear-gradient(135deg, #00ff00, #00ffff);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(229, 9, 20, 0.4);
+  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.3);
 }
 
 .google-signin-button:active {
